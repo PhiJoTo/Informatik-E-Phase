@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular für Webdienst</title>
+  </head>
+  <body>
+     <h1>Formulare an Webdienste versenden</h1>
+     <h2>Eingabeformular für einen QR-Code</h2>
+     <form name="QRCodeFormular" method="POST" action="https://chart.googleapis.com/chart" onsubmit='this.chs.value=this.laenge.value+"x"+this.laenge.value'>
+       <input type="hidden" name="cht" id="qr-qrchart" value="qr" />  <!-- Hidden-Formularfelder bekommt der Benutzer nicht zu sehen. -->
+       <input type="hidden" name="chs" id="qr-widthxheight" />        <!-- Werte in BreitexHöhe werden bei onsubmit im Script erzeugt. -->
+       <fieldset>                                                     <!-- Fieldset zur optischen Gruppierung von Formularelementen.   --> 
+          <legend>QR-Code Parameter</legend>                          <!-- Beschriftung des Fieldset (Legende)                         --> 
+          <p>
+            <label for="kantenlaenge">  Breite und Höhe: <input id="kantenlaenge" name="laenge" type="number" min="150" max="500" step="1" value="270"> px </label>
+          </p>                                                        <!-- Google kann mit dem Element laenge nichts anfangen. Es wird ignoriert. -->
+          <p><label for="qr-charencode"> Zeichenkodierung 
+               <select name="choe" id="qr-charencode" required="required">
+                 <option selected="selected" value="UTF-8">Erweiterter Zeichensatz (UTF-8)</option>
+                 <option value="ISO-8859-1">Sparsame Zeichenkodierung (ISO-8859-1)</option>
+                </select>
+             </label>
+          </p>  
+          <p><label for="qr-errorcorr"> Fehlerkorrektur
+              <select name="chld" id="qr-errorcorr" required="required">
+                <option selected="selected" value="L">L (Korrektur von bis zu 7% Datenverlust möglich)</option>
+                <option value="M">M (Korrektur von bis zu 15% Datenverlust möglich)</option>
+                <option value="Q">Q (Korrektur von bis zu 25% Datenverlust möglich)</option>
+                <option value="H">H (Korrektur von bis zu 30% Datenverlust möglich)</option>
+              </select>
+            </label>
+          </p>
+	</fieldset>
+        <fieldset>
+	  <legend>Zu codierende Daten</legend>
+	  <label for "qr-data"="">Daten
+            <textarea name="chl" id="qr-data" rows="5" placeholder="Beliebiger Text, Weblink, E-Mail, Visitenkarte, ..." style="width: 600px; height: 77px;"></textarea>
+          </label> 
+        </fieldset>
+        <input value="QR-Code generieren" type="submit">
+     </form>
+  </body>
+</html>

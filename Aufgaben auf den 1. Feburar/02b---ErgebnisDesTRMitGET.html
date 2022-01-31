@@ -1,0 +1,35 @@
+<!doctype html> 
+<html lang="de"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>
+      Der Taschenrechner, der eigentlich keiner ist .
+    </title>
+    <script language="javascript" type="text/javascript">
+       var wertestring=location.search.slice(1);               // Aus der URL werden die übergebenen Werte extrahiert
+       var werte=wertestring.split("&");                       // Trennung der Namen und Werte in ein Array
+       var zahl1 = parseFloat(werte[0].split("=")[1]);         // Extraktion der Werte
+       var operator = werte[1].split("=")[1];                  // Extraktion der Werte 
+       var zahl2 = parseFloat(werte[2].split("=")[1]);         // Extraktion der Werte 
+       var ergebnis;
+       switch(operator){                                       // Nun wird gerechnet
+          case "%2B": ergebnis=zahl1+zahl2;                    // Das + wurde beim Versand in %2B konvertiert. 
+                      operator="+";                            // Hier wird es wieder als + dargestellt.
+                      break;                                   
+          case "-": ergebnis=zahl1-zahl2; break;
+          case "*": ergebnis=zahl1*zahl2; break;
+          case "%3A": ergebnis=zahl1/zahl2;                    // Das : wurde beim Versand in %3A konvertiert. Gerechnet wird mit dem Slash
+                      operator=":";                            // Hier wird es wieder als : dargestellt.   
+                      break;
+       }
+    </script>
+  </head>
+  <body>
+    <h3>Der Taschenrechner, der eigentlich keiner ist.</h3>
+    <p> Ich habe das Ergebnis berechnet:</p>
+    <script language="javascript" type="text/javascript"> 
+      document.write("<p>"+zahl1+operator+zahl2+"="+ergebnis+"</p>");
+    </script>
+  </body>
+</html>

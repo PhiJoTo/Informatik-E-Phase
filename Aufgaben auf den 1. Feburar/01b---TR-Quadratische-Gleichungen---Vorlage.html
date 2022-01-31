@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Der Taschenrechner f�r quadratische Gleichungen</title>
+    <script language="JavaScript">
+      function loese() {
+        var p = document.formular.p.value;
+        var q = document.formular.q.value;
+        if ((p * p) / 4 < q) {
+          document.getElementById("x1").innerHTML = "keine Loesung";
+          document.getElementById("x2").innerHTML = "keine Loesung";
+        } else {
+          document.getElementById("x1").innerHTML =
+            -p / 2 + Math.sqrt((p * p) / 4 - q);
+          document.getElementById("x2").innerHTML = String(
+            -p / 2 - Math.sqrt((p * p) / 4 - q)
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Der Rechner f&uuml;r quadratische Gleichungen.</h3>
+    <form name="formular">
+      <p>p-Wert:</p>
+      <input type="number" name="p" id="p" />
+      <p>q-Wert:</p>
+      <input type="number" name="q" id="q" />
+      <input type="button" value="Ausrechnen" onclick="loese()" />
+      <br />
+      <p>x1 ist</p>
+      <p id="x1">Zum berechnen Werte eingeben und dann auf Lösen drücken.</p>
+      <p>x2 ist</p>
+      <p id="x2">Zum berechnen Werte eingeben und dann auf Lösen drücken.</p>
+    </form>
+  </body>
+</html>

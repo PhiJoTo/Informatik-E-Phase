@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Der Taschenrechner, der eigentlich keiner ist.</title>
+    <script language="javascript" type="text/javascript">
+      function berechne(zahl1, zahl2, operator) {
+        var ergebnis;
+        switch (operator) {
+          case "+":
+            ergebnis = zahl1 + zahl2;
+            break;
+          case "-":
+            ergebnis = zahl1 - zahl2;
+            break;
+          case "*":
+            ergebnis = zahl1 * zahl2;
+            break;
+          case "/":
+            ergebnis = zahl1 / zahl2;
+        }
+        window.alert(zahl1 + operator + zahl2 + "=" + ergebnis);
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Der Taschenrechner, der eigentlich keiner ist.</h3>
+    <form name="meinformular">
+      <table border="0">
+        <tr>
+          <td><input type="text" name="zahl1" value="" size="12" /></td>
+          <td>
+            <select name="operator">
+              <option>+</option>
+              <option>-</option>
+              <option>*</option>
+              <option>/</option>
+            </select>
+          </td>
+          <td><input type="text" name="zahl2" value="" size="12" /></td>
+          <td>
+            <input
+              type="button"
+              value="(=)"
+              name="rechnen"
+              onClick="berechne(parseFloat(zahl1.value),parseFloat(zahl2.value),operator.value)"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
