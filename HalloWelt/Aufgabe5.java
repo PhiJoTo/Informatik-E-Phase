@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Aufgabe5 {
-
   public static Scanner keyboard = new Scanner(System.in);
 
   public static void main(String args[]) {
@@ -20,16 +19,12 @@ public class Aufgabe5 {
       chosenFunction = keyboard.nextInt();
       switch (chosenFunction) {
         case 1:
-
           kreis();
           ;
-
         case 2:
-
           ints();
           ;
         case 3:
-
           randomInt();
           ;
       }
@@ -41,7 +36,6 @@ public class Aufgabe5 {
   // Funktion, die mit einem gegebenen Radius verschiedene Werte eines Kreises
   // berechnet und ausgibt.
   public static void kreis() {
-
     double r;
     double d;
     double u;
@@ -61,7 +55,6 @@ public class Aufgabe5 {
   // Funktion, die 2 Zahlen zu einer Summe, einer Differenz, einem Produkt und
   // einem Quotienten verrechnet
   public static void ints() {
-
     int a;
     int b;
     System.out.println("Gib den ersten Wert ein: ");
