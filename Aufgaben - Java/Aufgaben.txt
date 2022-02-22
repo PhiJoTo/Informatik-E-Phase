@@ -5,3 +5,6 @@ Gelöste Aufgaben:
 5 - ja
 6 - ja
 8 - ja
+9 - ja
+10 - ja
+11 - ja
