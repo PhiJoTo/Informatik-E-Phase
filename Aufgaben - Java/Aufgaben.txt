@@ -11,4 +11,6 @@ Gelöste Aufgaben:
 12 - ja
 13 - ja
 14 - ja
+15 - ja, klappt aber nicht
 16 - ja
+17 - ja
