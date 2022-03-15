@@ -14,3 +14,5 @@ Gelöste Aufgaben:
 15 - ja, klappt aber nicht
 16 - ja
 17 - ja
+18 - ja
+19 - ja

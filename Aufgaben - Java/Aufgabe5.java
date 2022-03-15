@@ -1,8 +1,12 @@
+
 import java.util.Scanner;
 
 public class Aufgabe5 {
   public static Scanner keyboard = new Scanner(System.in);
 
+  /**
+   * @param args[]
+   */
   public static void main(String args[]) {
     whileTrue();
   }
