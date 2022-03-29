@@ -16,3 +16,5 @@ Gelöste Aufgaben:
 17 - ja
 18 - ja
 19 - ja
+20 - ja
+21 - ja
