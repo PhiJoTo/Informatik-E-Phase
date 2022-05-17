@@ -102,17 +102,7 @@ return moneyWonOverYear() / moneyWonByDifferentPlayers.size();
       }
     }
      
-    int winLoss = 0 + (timesZero * -1) + (timesOne * 1) + (timesTwo * 2) + (timesThree * 5);
-
-    // System.out.println("Auswertung:");
-    // System.out.println("Number of games: " + numberOfGames);
-    // System.out.println("Times 0: " + timesZero);
-    // System.out.println("Times 1: " + timesOne);
-    // System.out.println("Times 2: " + timesTwo);
-    // System.out.println("Times 3: " + timesThree);
-    // System.out.println("-------------");
-    // System.out.println("Der Spieler hat " + winLoss+ " Euro gewonnen.");
-    
+    int winLoss = 0 + (timesZero * -1) + (timesOne * 1) + (timesTwo * 2) + (timesThree * 5);    
 return winLoss;
 
   }

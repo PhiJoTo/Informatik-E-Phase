@@ -6,6 +6,6 @@ package aufgaben;
 public class Aufgabe23 {
 
     public static void main(String[] args) {
-        // TODO
+        
     }
 }
