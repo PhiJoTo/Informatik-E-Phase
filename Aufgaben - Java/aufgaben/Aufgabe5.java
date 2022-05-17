@@ -1,3 +1,4 @@
+package aufgaben;
 
 import java.util.Scanner;
 

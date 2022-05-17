@@ -1,3 +1,4 @@
+package aufgaben;
 import java.util.Scanner;
 
 /**
@@ -36,11 +37,13 @@ public class Aufgabe15 {
       case 20:
         m = 24;
         n = 5;
+        break;
       case 21:
         m = 24;
         n = 6;
         break;
     }
+ 
     if (m == 0 || n == 0) {
       return "Fehler bei der Berechnung";
     }
@@ -53,7 +56,7 @@ public class Aufgabe15 {
     int march = 22 + d + e;
     int april = d + e - 9;
 
-    april = april == 26 ? april - 7 : (april == 25 && a > 10) ? april - 7 : april;
+    april = april == 26 ? april - 7 : (april == 25 && a > 10) ? april - 8 : april;
     System.out.println(march + " " + april);
 
     boolean couldBeMarch = false;
@@ -78,3 +81,43 @@ public class Aufgabe15 {
 
   }
 }
+
+
+// public class Ostern {
+
+//   public static void osterBerechnung(int j) {
+//     int m, a, b, c, d, e, tag, n = 4;
+//     String monat = new String();
+//     if (j >= 1900)
+//       m = 24;
+//     else
+//       m = 23;
+//     if (j >= 1900)
+//       n = 5;
+//     if (j >= 2100)
+//       n = 6;
+//     a = j % 19;
+//     b = j % 4;
+//     c = j % 7;
+//     d = (19 * a + m) % 30;
+//     e = (2 * b + 4 * c + 6 * d + n) % 7;
+//     if (22 + d + e > 31) {
+//       tag = d + e - 9;
+//       monat = "April";
+//     } else {
+//       tag = 22 + d + e;
+//       monat = "März";
+//     }
+//     if (22 + d + e - 31 == 26)
+//       tag = 19;
+//     if ((22 + d + e - 31 == 26) && (a > 10))
+//       tag = 18;
+//     System.out.println("Ostern ist im Jahr " + j + " am " + tag + ". " + monat);
+//   }
+
+//   public static void main(String[] args) {
+//     for (int i = 2010; i < 2025; i++)
+//       osterBerechnung(i);
+//   }
+
+// }

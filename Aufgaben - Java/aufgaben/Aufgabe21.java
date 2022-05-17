@@ -1,3 +1,4 @@
+package aufgaben;
 public class Aufgabe21 {
   public static void main(String[] args) {
     //Vermutung: Die untere SChleife wird immer öfter ausgeführt bis 5
