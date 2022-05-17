@@ -21,8 +21,22 @@ public class Aufgabe22 {
   }
 
   public static void einmaleins(double number) {
-    for (int i = 1; i <= number; i++) {
-      System.out.println( number + " * "+ i + ": " + (number * i));
-    }
+
+    int numberLength = ("" + (number* number)).length();
+
+   for(int x=1; x<=number; x++) {
+     for(int y=1; y<=number; y++){
+
+       int calcNumber = x*y;
+       String calcString = "" + calcNumber;
+
+     while(calcString.length() < numberLength-1){
+        calcString = " " + calcString;
+     }
+      
+         System.out.print(" "+ calcString);
+     }
+System.out.println();
+   }
   }
 }
